@@ -1,0 +1,699 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>scripting.engine.Engine : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            scripting API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code>scripting.engine.Engine</code> <small>class documentation</small></h1>
+
+        <span id="partOf">
+          Part of <code><a href="scripting.html" class="code" data-type="Package">scripting</a>.<a href="scripting.engine.html" class="code" data-type="Module">engine</a></code>
+          
+          <a href="classIndex.html#scripting.engine.Engine">(View In Hierarchy)</a>
+        </span>
+      </div>
+
+      <div class="extrasDocstring">
+        
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p>Provides access to the internals of AutoKey.</p><p>Note that any configuration changes made using this API while the configuration window is open will not appear until it is closed and re-opened.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id14">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="scripting.engine.Engine.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="scripting.engine.Engine.html#configManager" class="code" data-type="Instance Variable">configManager</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="scripting.engine.Engine.html#runner" class="code" data-type="Instance Variable">runner</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="scripting.engine.Engine.html#monitor" class="code" data-type="Instance Variable">monitor</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="scripting.engine.Engine.html#get_folder" class="code" data-type="Method">get_folder</a></td>
+    <td><span>Retrieve a folder by its title</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="scripting.engine.Engine.html#create_folder" class="code" data-type="Method">create_folder</a></td>
+    <td><span>Create and return a new folder.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="scripting.engine.Engine.html#create_phrase" class="code" data-type="Method">create_phrase</a></td>
+    <td><span>Create a new text phrase inside the given folder. Use <code>engine.get_folder(folder_name)</code> to retrieve the folder you wish to create the Phrase in. If the folder is a temporary one, the phrase will be created as temporary.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="scripting.engine.Engine.html#create_abbreviation" class="code" data-type="Method">create_abbreviation</a></td>
+    <td><span>DEPRECATED. Use engine.create_phrase() with appropriate keyword arguments instead. Create a new text phrase inside the given folder and assign the abbreviation given.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="scripting.engine.Engine.html#create_hotkey" class="code" data-type="Method">create_hotkey</a></td>
+    <td><span>DEPRECATED. Use engine.create_phrase() with appropriate keyword arguments instead.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="scripting.engine.Engine.html#run_script" class="code" data-type="Method">run_script</a></td>
+    <td><span>Run an existing script using its description or path to look it up</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="scripting.engine.Engine.html#run_script_from_macro" class="code" data-type="Method">run_script_from_macro</a></td>
+    <td><span>Used internally by AutoKey for phrase macros</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="scripting.engine.Engine.html#run_system_command_from_macro" class="code" data-type="Method">run_system_command_from_macro</a></td>
+    <td><span>Used internally by AutoKey for system macros</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="scripting.engine.Engine.html#get_script_arguments" class="code" data-type="Method">get_script_arguments</a></td>
+    <td><span>Get the arguments supplied to the current script via the scripting api</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="scripting.engine.Engine.html#get_script_keyword_arguments" class="code" data-type="Method">get_script_keyword_arguments</a></td>
+    <td><span>Get the arguments supplied to the current script via the scripting api as keyword args.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="scripting.engine.Engine.html#get_macro_arguments" class="code" data-type="Method">get_macro_arguments</a></td>
+    <td><span>Get the arguments supplied to the current script via its macro</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="scripting.engine.Engine.html#set_return_value" class="code" data-type="Method">set_return_value</a></td>
+    <td><span>Store a return value to be used by a phrase macro</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="scripting.engine.Engine.html#get_triggered_abbreviation" class="code" data-type="Method">get_triggered_abbreviation</a></td>
+    <td><span>This function can be queried by a script to get the abbreviation text that triggered it’s execution.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="scripting.engine.Engine.html#remove_all_temporary" class="code" data-type="Method">remove_all_temporary</a></td>
+    <td><span>Removes all temporary folders and phrases, as well as any within temporary folders. Useful for rc-style scripts that want to change a set of keys.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="scripting.engine.Engine.html#get_item_with_hotkey" class="code" data-type="Method">get_item_with_hotkey</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="scripting.engine.Engine.html#_macro_args" class="code" data-type="Instance Variable">_macro_args</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="scripting.engine.Engine.html#_script_args" class="code" data-type="Instance Variable">_script_args</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="scripting.engine.Engine.html#_script_kwargs" class="code" data-type="Instance Variable">_script_kwargs</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="scripting.engine.Engine.html#_return_value" class="code" data-type="Instance Variable">_return_value</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="scripting.engine.Engine.html#_triggered_abbreviation" class="code" data-type="Instance Variable">_triggered_abbreviation</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="scripting.engine.Engine.html#__clear_existing_hotkey" class="code" data-type="Method">__clear_existing_hotkey</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="scripting.engine.Engine.html#_get_return_value" class="code" data-type="Method">_get_return_value</a></td>
+    <td><span>Used internally by AutoKey for phrase macros</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="scripting.engine.Engine.html#_set_triggered_abbreviation" class="code" data-type="Method">_set_triggered_abbreviation</a></td>
+    <td><span>Used internally by AutoKey to provide the abbreviation and trigger that caused the script to execute. @param abbreviation: Abbreviation that caused the script to execute @param trigger_character: Possibly empty "trigger character". As defined in the abbreviation configuration.</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="scripting.engine.Engine.html#_triggered_character" class="code" data-type="Instance Variable">_triggered_character</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="scripting.engine.Engine.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, config_manager, runner):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="scripting.engine.Engine.configManager">
+    
+  </a>
+  <a name="configManager">
+    
+  </a>
+  <div class="functionHeader">
+    configManager =
+  </div>
+  <div class="functionBody">
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="scripting.engine.Engine.runner">
+    
+  </a>
+  <a name="runner">
+    
+  </a>
+  <div class="functionHeader">
+    runner =
+  </div>
+  <div class="functionBody">
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="scripting.engine.Engine.monitor">
+    
+  </a>
+  <a name="monitor">
+    
+  </a>
+  <div class="functionHeader">
+    monitor =
+  </div>
+  <div class="functionBody">
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="scripting.engine.Engine._macro_args">
+    
+  </a>
+  <a name="_macro_args">
+    
+  </a>
+  <div class="functionHeader">
+    _macro_args =
+  </div>
+  <div class="functionBody">
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="scripting.engine.Engine._script_args">
+    
+  </a>
+  <a name="_script_args">
+    
+  </a>
+  <div class="functionHeader">
+    _script_args =
+  </div>
+  <div class="functionBody">
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="scripting.engine.Engine._script_kwargs">
+    
+  </a>
+  <a name="_script_kwargs">
+    
+  </a>
+  <div class="functionHeader">
+    _script_kwargs =
+  </div>
+  <div class="functionBody">
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="scripting.engine.Engine._return_value">
+    
+  </a>
+  <a name="_return_value">
+    
+  </a>
+  <div class="functionHeader">
+    _return_value =
+  </div>
+  <div class="functionBody">
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="scripting.engine.Engine._triggered_abbreviation">
+    
+  </a>
+  <a name="_triggered_abbreviation">
+    
+  </a>
+  <div class="functionHeader">
+    _triggered_abbreviation =
+  </div>
+  <div class="functionBody">
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="scripting.engine.Engine.get_folder">
+    
+  </a>
+  <a name="get_folder">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_folder(self, title):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Retrieve a folder by its title</p><p>Usage: <code>engine.get_folder(title)</code></p><p>Note that if more than one folder has the same title, only the first match will be returned.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="scripting.engine.Engine.create_folder">
+    
+  </a>
+  <a name="create_folder">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    create_folder(self, title, parent_folder=None, temporary=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="scripting.engine.Engine.create_phrase">
+    
+  </a>
+  <a name="create_phrase">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    create_phrase(self, folder, name, contents, abbreviations=None, hotkey=None, send_mode=autokey.model.phrase.SendMode.KEYBOARD, window_filter=None, show_in_system_tray=(False), always_prompt=(False), temporary=(False), replace_existing_hotkey=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="scripting.engine.Engine.__clear_existing_hotkey">
+    
+  </a>
+  <a name="__clear_existing_hotkey">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __clear_existing_hotkey(self, hotkey, window_filter):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="scripting.engine.Engine.create_abbreviation">
+    
+  </a>
+  <a name="create_abbreviation">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    create_abbreviation(self, folder, description, abbr, contents):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>DEPRECATED. Use engine.create_phrase() with appropriate keyword arguments instead. Create a new text phrase inside the given folder and assign the abbreviation given.</p><p>Usage: <code>engine.create_abbreviation(folder, description, abbr, contents)</code></p><p>When the given abbreviation is typed, it will be replaced with the given text.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">folder</td><td>folder to place the abbreviation in, retrieved using <code>engine.get_folder()</code></td></tr><tr><td></td><td class="fieldArg">description</td><td>description for the phrase</td></tr><tr><td></td><td class="fieldArg">abbr</td><td>the abbreviation that will trigger the expansion</td></tr><tr><td></td><td class="fieldArg">contents</td><td>the expansion text</td></tr><tr class="fieldStart"><td class="fieldName">Raises</td><td class="fieldArg">Exception</td><td>if the specified abbreviation is not unique</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="scripting.engine.Engine.create_hotkey">
+    
+  </a>
+  <a name="create_hotkey">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    create_hotkey(self, folder, description, modifiers, key, contents):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>DEPRECATED. Use engine.create_phrase() with appropriate keyword arguments instead.</p><p>Create a text hotkey</p><p>Usage: <code>engine.create_hotkey(folder, description, modifiers, key, contents)</code></p><p>When the given hotkey is pressed, it will be replaced with the given text. Modifiers must be given as a list of strings, with the following values permitted:</p><p>&lt;ctrl&gt; &lt;alt&gt; &lt;super&gt; &lt;hyper&gt; &lt;meta&gt; &lt;shift&gt;</p><p>The key must be an unshifted character (i.e. lowercase)</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">folder</td><td>folder to place the abbreviation in, retrieved using <code>engine.get_folder()</code></td></tr><tr><td></td><td class="fieldArg">description</td><td>description for the phrase</td></tr><tr><td></td><td class="fieldArg">modifiers</td><td>modifiers to use with the hotkey (as a list)</td></tr><tr><td></td><td class="fieldArg">key</td><td>the hotkey</td></tr><tr><td></td><td class="fieldArg">contents</td><td>the expansion text</td></tr><tr class="fieldStart"><td class="fieldName">Raises</td><td class="fieldArg">Exception</td><td>if the specified hotkey is not unique</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="scripting.engine.Engine.run_script">
+    
+  </a>
+  <a name="run_script">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    run_script(self, description, *args, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="scripting.engine.Engine.run_script_from_macro">
+    
+  </a>
+  <a name="run_script_from_macro">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    run_script_from_macro(self, args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Used internally by AutoKey for phrase macros</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="scripting.engine.Engine.run_system_command_from_macro">
+    
+  </a>
+  <a name="run_system_command_from_macro">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    run_system_command_from_macro(self, args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Used internally by AutoKey for system macros</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="scripting.engine.Engine.get_script_arguments">
+    
+  </a>
+  <a name="get_script_arguments">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_script_arguments(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Get the arguments supplied to the current script via the scripting api</p><p>Usage: <code>engine.get_script_arguments()</code></p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Returns</td><td colspan="2">the arguments (type: <code>list[Any]</code>)</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="scripting.engine.Engine.get_script_keyword_arguments">
+    
+  </a>
+  <a name="get_script_keyword_arguments">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_script_keyword_arguments(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Get the arguments supplied to the current script via the scripting api as keyword args.</p><p>Usage: <code>engine.get_script_keyword_arguments()</code></p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Returns</td><td colspan="2">the arguments (type: <code>Dict[str, Any]</code>)</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="scripting.engine.Engine.get_macro_arguments">
+    
+  </a>
+  <a name="get_macro_arguments">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_macro_arguments(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Get the arguments supplied to the current script via its macro</p><p>Usage: <code>engine.get_macro_arguments()</code></p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Returns</td><td colspan="2">the arguments (type: <code>list(str())</code>)</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="scripting.engine.Engine.set_return_value">
+    
+  </a>
+  <a name="set_return_value">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_return_value(self, val):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Store a return value to be used by a phrase macro</p><p>Usage: <code>engine.set_return_value(val)</code></p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">val</td><td>value to be stored</td></tr></table></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="scripting.engine.Engine._get_return_value">
+    
+  </a>
+  <a name="_get_return_value">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_return_value(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Used internally by AutoKey for phrase macros</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="scripting.engine.Engine._set_triggered_abbreviation">
+    
+  </a>
+  <a name="_set_triggered_abbreviation">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _set_triggered_abbreviation(self, abbreviation, trigger_character):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Used internally by AutoKey to provide the abbreviation and trigger that caused the script to execute.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">abbreviation</td><td>Abbreviation that caused the script to execute</td></tr><tr><td></td><td class="fieldArg">trigger_character</td><td>Possibly empty "trigger character". As defined in the abbreviation configuration.</td></tr></table></div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="scripting.engine.Engine._triggered_character">
+    
+  </a>
+  <a name="_triggered_character">
+    
+  </a>
+  <div class="functionHeader">
+    _triggered_character =
+  </div>
+  <div class="functionBody">
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="scripting.engine.Engine.get_triggered_abbreviation">
+    
+  </a>
+  <a name="get_triggered_abbreviation">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_triggered_abbreviation(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>This function can be queried by a script to get the abbreviation text that triggered it’s execution.</p><p>If a script is triggered by an abbreviation, this function returns a tuple containing two strings. First element is the abbreviation text. The second element is the trigger character that finally caused the execution. It is typically some whitespace character, like ' ', '        ' or a newline character. It is empty, if the abbreviation was configured to "trigger immediately".</p><p>If the script execution was triggered by a hotkey, a call to the DBus interface, the tray icon, the "Run" button in the main window or any other means, this function returns a tuple containing two None values.</p><p>Usage: <code>abbreviation, trigger_character = engine.get_triggered_abbreviation()</code> You can determine if the script was triggered by an abbreviation by simply testing the truth value of the first returned value.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Returns</td><td colspan="2">Abbreviation that triggered the script execution, if any. (type: <code>Tuple[Optional[str], Optional[str]]</code>)</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="scripting.engine.Engine.remove_all_temporary">
+    
+  </a>
+  <a name="remove_all_temporary">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    remove_all_temporary(self, folder=None, in_temp_parent=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Removes all temporary folders and phrases, as well as any within temporary folders. Useful for rc-style scripts that want to change a set of keys.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="scripting.engine.Engine.get_item_with_hotkey">
+    
+  </a>
+  <a name="get_item_with_hotkey">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_item_with_hotkey(self, hotkey):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for scripting, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> at 2020-11-03 23:10:21.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

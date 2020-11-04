@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>scripting.keyboard.Keyboard : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            scripting API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code>scripting.keyboard.Keyboard</code> <small>class documentation</small></h1>
+
+        <span id="partOf">
+          Part of <code><a href="scripting.html" class="code" data-type="Package">scripting</a>.<a href="scripting.keyboard.html" class="code" data-type="Module">keyboard</a></code>
+          
+          <a href="classIndex.html#scripting.keyboard.Keyboard">(View In Hierarchy)</a>
+        </span>
+      </div>
+
+      <div class="extrasDocstring">
+        
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p>Provides access to the keyboard for event generation.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id17">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="scripting.keyboard.Keyboard.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="scripting.keyboard.Keyboard.html#mediator" class="code" data-type="Instance Variable">mediator</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="scripting.keyboard.Keyboard.html#send_keys" class="code" data-type="Method">send_keys</a></td>
+    <td><span>Send a sequence of keys via keyboard events as the default or via clipboard pasting. Because the clipboard can only contain printable characters, special keys and embedded key combinations can only be sent in keyboard mode.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="scripting.keyboard.Keyboard.html#send_key" class="code" data-type="Method">send_key</a></td>
+    <td><span>Send a keyboard event</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="scripting.keyboard.Keyboard.html#press_key" class="code" data-type="Method">press_key</a></td>
+    <td><span>Send a key down event</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="scripting.keyboard.Keyboard.html#release_key" class="code" data-type="Method">release_key</a></td>
+    <td><span>Send a key up event</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="scripting.keyboard.Keyboard.html#fake_keypress" class="code" data-type="Method">fake_keypress</a></td>
+    <td><span>Fake a keypress</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="scripting.keyboard.Keyboard.html#wait_for_keypress" class="code" data-type="Method">wait_for_keypress</a></td>
+    <td><span>Wait for a keypress or key combination</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="scripting.keyboard.Keyboard.html#wait_for_keyevent" class="code" data-type="Method">wait_for_keyevent</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="scripting.keyboard.Keyboard.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, mediator):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="scripting.keyboard.Keyboard.mediator">
+    
+  </a>
+  <a name="mediator">
+    
+  </a>
+  <div class="functionHeader">
+    mediator =
+  </div>
+  <div class="functionBody">
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="scripting.keyboard.Keyboard.send_keys">
+    
+  </a>
+  <a name="send_keys">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    send_keys(self, key_string, send_mode=autokey.model.phrase.SendMode.KEYBOARD):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Send a sequence of keys via keyboard events as the default or via clipboard pasting. Because the clipboard can only contain printable characters, special keys and embedded key combinations can only be sent in keyboard mode.</p><p>Trying to send special keys using a clipboard pasting method will paste the literal representation (e.g. "&lt;ctrl&gt;+&lt;f11&gt;") instead of the actual special key or key combination.</p><p>Usage: <code>keyboard.send_keys(keyString)</code></p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">key_string</td><td>string of keys to send. Special keys are only possible in keyboard mode.</td></tr><tr><td></td><td class="fieldArg">send_mode</td><td>Determines how the string is send.</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="scripting.keyboard.Keyboard.send_key">
+    
+  </a>
+  <a name="send_key">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    send_key(self, key, repeat=1):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Send a keyboard event</p><p>Usage: <code>keyboard.send_key(key, repeat=1)</code></p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">key</td><td>they key to be sent (e.g. "s" or "&lt;enter&gt;")</td></tr><tr><td></td><td class="fieldArg">repeat</td><td>number of times to repeat the key event</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="scripting.keyboard.Keyboard.press_key">
+    
+  </a>
+  <a name="press_key">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    press_key(self, key):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Send a key down event</p><p>Usage: <code>keyboard.press_key(key)</code></p><p>The key will be treated as down until a matching release_key() is sent.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">key</td><td>they key to be pressed (e.g. "s" or "&lt;enter&gt;")</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="scripting.keyboard.Keyboard.release_key">
+    
+  </a>
+  <a name="release_key">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    release_key(self, key):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Send a key up event</p><p>Usage: <code>keyboard.release_key(key)</code></p><p>If the specified key was not made down using press_key(), the event will be ignored.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">key</td><td>they key to be released (e.g. "s" or "&lt;enter&gt;")</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="scripting.keyboard.Keyboard.fake_keypress">
+    
+  </a>
+  <a name="fake_keypress">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    fake_keypress(self, key, repeat=1):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Fake a keypress</p><p>Usage: <code>keyboard.fake_keypress(key, repeat=1)</code></p><p>Uses XTest to 'fake' a keypress. This is useful to send keypresses to some applications which won't respond to keyboard.send_key()</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">key</td><td>they key to be sent (e.g. "s" or "&lt;enter&gt;")</td></tr><tr><td></td><td class="fieldArg">repeat</td><td>number of times to repeat the key event</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="scripting.keyboard.Keyboard.wait_for_keypress">
+    
+  </a>
+  <a name="wait_for_keypress">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    wait_for_keypress(self, key, modifiers=None, timeOut=10.0):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Wait for a keypress or key combination</p><p>Usage: <code>keyboard.wait_for_keypress(self, key, modifiers=[], timeOut=10.0)</code></p><p>Note: this function cannot be used to wait for modifier keys on their own</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">key</td><td>they key to wait for</td></tr><tr><td></td><td class="fieldArg">modifiers</td><td>list of modifiers that should be pressed with the key</td></tr><tr><td></td><td class="fieldArg">timeOut</td><td>maximum time, in seconds, to wait for the keypress to occur</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="scripting.keyboard.Keyboard.wait_for_keyevent">
+    
+  </a>
+  <a name="wait_for_keyevent">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    wait_for_keyevent(self, check, name=None, timeOut=10.0):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for scripting, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> at 2020-11-03 23:10:21.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

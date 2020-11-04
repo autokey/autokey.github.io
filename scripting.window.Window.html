@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>scripting.window.Window : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            scripting API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code>scripting.window.Window</code> <small>class documentation</small></h1>
+
+        <span id="partOf">
+          Part of <code><a href="scripting.html" class="code" data-type="Package">scripting</a>.<a href="scripting.window.html" class="code" data-type="Module">window</a></code>
+          
+          <a href="classIndex.html#scripting.window.Window">(View In Hierarchy)</a>
+        </span>
+      </div>
+
+      <div class="extrasDocstring">
+        
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p>Basic window management using wmctrl</p><p>Note: in all cases where a window title is required (with the exception of wait_for_focus()), two special values of window title are permitted:</p><p>:ACTIVE: - select the currently active window :SELECT: - select the desired window by clicking on it</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id23">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="scripting.window.Window.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="scripting.window.Window.html#mediator" class="code" data-type="Instance Variable">mediator</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="scripting.window.Window.html#wait_for_focus" class="code" data-type="Method">wait_for_focus</a></td>
+    <td><span>Wait for window with the given title to have focus</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="scripting.window.Window.html#wait_for_exist" class="code" data-type="Method">wait_for_exist</a></td>
+    <td><span>Wait for window with the given title to be created</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="scripting.window.Window.html#activate" class="code" data-type="Method">activate</a></td>
+    <td><span>Activate the specified window, giving it input focus</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="scripting.window.Window.html#close" class="code" data-type="Method">close</a></td>
+    <td><span>Close the specified window gracefully</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="scripting.window.Window.html#resize_move" class="code" data-type="Method">resize_move</a></td>
+    <td><span>Resize and/or move the specified window</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="scripting.window.Window.html#move_to_desktop" class="code" data-type="Method">move_to_desktop</a></td>
+    <td><span>Move the specified window to the given desktop</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="scripting.window.Window.html#switch_desktop" class="code" data-type="Method">switch_desktop</a></td>
+    <td><span>Switch to the specified desktop</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="scripting.window.Window.html#set_property" class="code" data-type="Method">set_property</a></td>
+    <td><span>Set a property on the given window using the specified action</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="scripting.window.Window.html#get_active_geometry" class="code" data-type="Method">get_active_geometry</a></td>
+    <td><span>Get the geometry of the currently active window</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="scripting.window.Window.html#get_active_title" class="code" data-type="Method">get_active_title</a></td>
+    <td><span>Get the visible title of the currently active window</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="scripting.window.Window.html#get_active_class" class="code" data-type="Method">get_active_class</a></td>
+    <td><span>Get the class of the currently active window</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="scripting.window.Window.html#_run_wmctrl" class="code" data-type="Method">_run_wmctrl</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="scripting.window.Window.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, mediator):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="scripting.window.Window.mediator">
+    
+  </a>
+  <a name="mediator">
+    
+  </a>
+  <div class="functionHeader">
+    mediator =
+  </div>
+  <div class="functionBody">
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="scripting.window.Window.wait_for_focus">
+    
+  </a>
+  <a name="wait_for_focus">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    wait_for_focus(self, title, timeOut=5):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Wait for window with the given title to have focus</p><p>Usage: <code>window.wait_for_focus(title, timeOut=5)</code></p><p>If the window becomes active, returns True. Otherwise, returns False if the window has not become active by the time the timeout has elapsed.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">title</td><td>title to match against (as a regular expression)</td></tr><tr><td></td><td class="fieldArg">timeOut</td><td>period (seconds) to wait before giving up</td></tr><tr class="fieldStart"><td class="fieldName">Returns</td><td colspan="2"> (type: boolean)</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="scripting.window.Window.wait_for_exist">
+    
+  </a>
+  <a name="wait_for_exist">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    wait_for_exist(self, title, timeOut=5):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Wait for window with the given title to be created</p><p>Usage: <code>window.wait_for_exist(title, timeOut=5)</code></p><p>If the window is in existence, returns True. Otherwise, returns False if the window has not been created by the time the timeout has elapsed.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">title</td><td>title to match against (as a regular expression)</td></tr><tr><td></td><td class="fieldArg">timeOut</td><td>period (seconds) to wait before giving up</td></tr><tr class="fieldStart"><td class="fieldName">Returns</td><td colspan="2"> (type: boolean)</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="scripting.window.Window.activate">
+    
+  </a>
+  <a name="activate">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    activate(self, title, switchDesktop=(False), matchClass=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Activate the specified window, giving it input focus</p><p>Usage: <code>window.activate(title, switchDesktop=False, matchClass=False)</code></p><p>If switchDesktop is False (default), the window will be moved to the current desktop and activated. Otherwise, switch to the window's current desktop and activate it there.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">title</td><td>window title to match against (as case-insensitive substring match)</td></tr><tr><td></td><td class="fieldArg">switchDesktop</td><td>whether or not to switch to the window's current desktop</td></tr><tr><td></td><td class="fieldArg">matchClass</td><td>if True, match on the window class instead of the title</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="scripting.window.Window.close">
+    
+  </a>
+  <a name="close">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    close(self, title, matchClass=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Close the specified window gracefully</p><p>Usage: <code>window.close(title, matchClass=False)</code></p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">title</td><td>window title to match against (as case-insensitive substring match)</td></tr><tr><td></td><td class="fieldArg">matchClass</td><td>if True, match on the window class instead of the title</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="scripting.window.Window.resize_move">
+    
+  </a>
+  <a name="resize_move">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    resize_move(self, title, xOrigin=(-1), yOrigin=(-1), width=(-1), height=(-1), matchClass=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Resize and/or move the specified window</p><p>Usage: <code>window.close(title, xOrigin=-1, yOrigin=-1, width=-1, height=-1, matchClass=False)</code></p><p>Leaving and of the position/dimension values as the default (-1) will cause that value to be left unmodified.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">title</td><td>window title to match against (as case-insensitive substring match)</td></tr><tr><td></td><td class="fieldArg">xOrigin</td><td>new x origin of the window (upper left corner)</td></tr><tr><td></td><td class="fieldArg">yOrigin</td><td>new y origin of the window (upper left corner)</td></tr><tr><td></td><td class="fieldArg">width</td><td>new width of the window</td></tr><tr><td></td><td class="fieldArg">height</td><td>new height of the window</td></tr><tr><td></td><td class="fieldArg">matchClass</td><td>if True, match on the window class instead of the title</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="scripting.window.Window.move_to_desktop">
+    
+  </a>
+  <a name="move_to_desktop">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    move_to_desktop(self, title, deskNum, matchClass=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Move the specified window to the given desktop</p><p>Usage: <code>window.move_to_desktop(title, deskNum, matchClass=False)</code></p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">title</td><td>window title to match against (as case-insensitive substring match)</td></tr><tr><td></td><td class="fieldArg">deskNum</td><td>desktop to move the window to (note: zero based)</td></tr><tr><td></td><td class="fieldArg">matchClass</td><td>if True, match on the window class instead of the title</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="scripting.window.Window.switch_desktop">
+    
+  </a>
+  <a name="switch_desktop">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    switch_desktop(self, deskNum):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Switch to the specified desktop</p><p>Usage: <code>window.switch_desktop(deskNum)</code></p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">deskNum</td><td>desktop to switch to (note: zero based)</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="scripting.window.Window.set_property">
+    
+  </a>
+  <a name="set_property">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_property(self, title, action, prop, matchClass=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Set a property on the given window using the specified action</p><p>Usage: <code>window.set_property(title, action, prop, matchClass=False)</code></p><p>Allowable actions: <code>add, remove, toggle</code> Allowable properties: <code>modal, sticky, maximized_vert, maximized_horz, shaded, skip_taskbar, skip_pager, hidden, fullscreen, above</code></p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">title</td><td>window title to match against (as case-insensitive substring match)</td></tr><tr><td></td><td class="fieldArg">action</td><td>one of the actions listed above</td></tr><tr><td></td><td class="fieldArg">prop</td><td>one of the properties listed above</td></tr><tr><td></td><td class="fieldArg">matchClass</td><td>if True, match on the window class instead of the title</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="scripting.window.Window.get_active_geometry">
+    
+  </a>
+  <a name="get_active_geometry">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_active_geometry(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Get the geometry of the currently active window</p><p>Usage: <code>window.get_active_geometry()</code></p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Returns</td><td colspan="2">a 4-tuple containing the x-origin, y-origin, width and height of the window (in pixels) (type: <code>tuple(int, int, int, int)</code>)</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="scripting.window.Window.get_active_title">
+    
+  </a>
+  <a name="get_active_title">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_active_title(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Get the visible title of the currently active window</p><p>Usage: <code>window.get_active_title()</code></p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Returns</td><td colspan="2">the visible title of the currentle active window (type: <code>str</code>)</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="scripting.window.Window.get_active_class">
+    
+  </a>
+  <a name="get_active_class">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_active_class(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Get the class of the currently active window</p><p>Usage: <code>window.get_active_class()</code></p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Returns</td><td colspan="2">the class of the currentle active window (type: <code>str</code>)</td></tr></table></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="scripting.window.Window._run_wmctrl">
+    
+  </a>
+  <a name="_run_wmctrl">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _run_wmctrl(self, args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for scripting, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> at 2020-11-03 23:10:21.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

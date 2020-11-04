@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>scripting.mouse.Mouse : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            scripting API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code>scripting.mouse.Mouse</code> <small>class documentation</small></h1>
+
+        <span id="partOf">
+          Part of <code><a href="scripting.html" class="code" data-type="Package">scripting</a>.<a href="scripting.mouse.html" class="code" data-type="Module">mouse</a></code>
+          
+          <a href="classIndex.html#scripting.mouse.Mouse">(View In Hierarchy)</a>
+        </span>
+      </div>
+
+      <div class="extrasDocstring">
+        
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p>Provides access to send mouse clicks</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id19">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="scripting.mouse.Mouse.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="scripting.mouse.Mouse.html#mediator" class="code" data-type="Instance Variable">mediator</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="scripting.mouse.Mouse.html#interface" class="code" data-type="Instance Variable">interface</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="scripting.mouse.Mouse.html#click_relative" class="code" data-type="Method">click_relative</a></td>
+    <td><span>Send a mouse click relative to the active window</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="scripting.mouse.Mouse.html#click_relative_self" class="code" data-type="Method">click_relative_self</a></td>
+    <td><span>Send a mouse click relative to the current mouse position</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="scripting.mouse.Mouse.html#click_absolute" class="code" data-type="Method">click_absolute</a></td>
+    <td><span>Send a mouse click relative to the screen (absolute)</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="scripting.mouse.Mouse.html#wait_for_click" class="code" data-type="Method">wait_for_click</a></td>
+    <td><span>Wait for a mouse click</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="scripting.mouse.Mouse.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, mediator):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="scripting.mouse.Mouse.mediator">
+    
+  </a>
+  <a name="mediator">
+    
+  </a>
+  <div class="functionHeader">
+    mediator =
+  </div>
+  <div class="functionBody">
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="scripting.mouse.Mouse.interface">
+    
+  </a>
+  <a name="interface">
+    
+  </a>
+  <div class="functionHeader">
+    interface =
+  </div>
+  <div class="functionBody">
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="scripting.mouse.Mouse.click_relative">
+    
+  </a>
+  <a name="click_relative">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    click_relative(self, x, y, button):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Send a mouse click relative to the active window</p><p>Usage: <code>mouse.click_relative(x, y, button)</code></p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">x</td><td>x-coordinate in pixels, relative to upper left corner of window</td></tr><tr><td></td><td class="fieldArg">y</td><td>y-coordinate in pixels, relative to upper left corner of window</td></tr><tr><td></td><td class="fieldArg">button</td><td>mouse button to simulate (left=1, middle=2, right=3)</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="scripting.mouse.Mouse.click_relative_self">
+    
+  </a>
+  <a name="click_relative_self">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    click_relative_self(self, x, y, button):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Send a mouse click relative to the current mouse position</p><p>Usage: <code>mouse.click_relative_self(x, y, button)</code></p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">x</td><td>x-offset in pixels, relative to current mouse position</td></tr><tr><td></td><td class="fieldArg">y</td><td>y-offset in pixels, relative to current mouse position</td></tr><tr><td></td><td class="fieldArg">button</td><td>mouse button to simulate (left=1, middle=2, right=3)</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="scripting.mouse.Mouse.click_absolute">
+    
+  </a>
+  <a name="click_absolute">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    click_absolute(self, x, y, button):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Send a mouse click relative to the screen (absolute)</p><p>Usage: <code>mouse.click_absolute(x, y, button)</code></p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">x</td><td>x-coordinate in pixels, relative to upper left corner of window</td></tr><tr><td></td><td class="fieldArg">y</td><td>y-coordinate in pixels, relative to upper left corner of window</td></tr><tr><td></td><td class="fieldArg">button</td><td>mouse button to simulate (left=1, middle=2, right=3)</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="scripting.mouse.Mouse.wait_for_click">
+    
+  </a>
+  <a name="wait_for_click">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    wait_for_click(self, button, timeOut=10.0):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Wait for a mouse click</p><p>Usage: <code>mouse.wait_for_click(self, button, timeOut=10.0)</code></p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">button</td><td>they mouse button click to wait for as a button number, 1-9</td></tr><tr><td></td><td class="fieldArg">timeOut</td><td>maximum time, in seconds, to wait for the keypress to occur</td></tr></table></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for scripting, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> at 2020-11-03 23:10:21.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>
