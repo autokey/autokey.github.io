@@ -45,7 +45,7 @@ sys.path.insert(0, os.path.abspath('./ak_temp/lib'))
 
 project = 'AutoKey Main'
 # is there some way to have this be a link to github authors page?
-copyright = '2021, Various'
+copyright = '2023, Various'
 author = 'Various'
 
 # The full version, including alpha/beta/rc tags
@@ -110,9 +110,9 @@ html_favicon = 'favicon.ico'
 # this enables the "edit on github behavior for the top right corners of webpages
 html_context = {
     'display_github': True,
-    'github_user': 'sebastiansam55',
-    'github_repo': 'autokey-sphinx',
-    'github_version': 'main/',
+    'github_user': 'autokey',
+    'github_repo': 'autokey.github.io',
+    'github_version': 'master/',
 }
 
 autodoc_mock_imports = [
