@@ -1,0 +1,45 @@
+name: Build Autokey pages
+on: [push, workflow_dispatch]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  sphinx-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v2.3.4
+      - name: install git
+        run: |
+          sudo apt-get install git -y
+
+      - name: clone and install autokey
+        run: |
+          git clone https://github.com/autokey/autokey
+          cd autokey
+          pip install .
+      - name: install sphinx
+        run: pip install sphinx recommonmark sphinx-rtd-theme sphinx-epytext enum-tools[sphinx]
+      - name: build sphinx site
+        run: |
+          mkdir docs
+          sphinx-build -a -E -b html ./ docs
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: docs
+      
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: sphinx-build
+    runs-on: ubuntu-latest
+    name: Deploy
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
