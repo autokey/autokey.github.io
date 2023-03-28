@@ -9,6 +9,7 @@ Welcome to AutoKey!
 .. toctree::
    intro
    api
+   phrases
 
 
 
