@@ -1,5 +1,9 @@
 name: Build Autokey pages
-on: [push, workflow_dispatch]
+on: 
+  push:
+    branches:
+      - master
+  workflow_dispatch:
 
 permissions:
   contents: read
