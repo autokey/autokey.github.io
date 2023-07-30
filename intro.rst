@@ -42,7 +42,7 @@ apply to AutoKey, will make understanding the AutoKey much easier.
    tags are replaced with text. For example, the ``date`` tag is
    replaced with the current date and time. For details, see `Dynamic
    Phrases, Using Macros as placeholders in
-   Phrases <../wiki/Dynamic-Phrases,-Using-Macros-as-placeholders-in-Phrases>`__
+   Phrases <https://github.com/autokey/autokey/wiki/Dynamic-Phrases,-Using-Macros-as-placeholders-in-Phrases>`__
 
 How are things organized?
 -------------------------
