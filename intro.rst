@@ -40,9 +40,8 @@ apply to AutoKey, will make understanding the AutoKey much easier.
 -  **macro** - A special ``<tag>`` that can be placed inside a phrase,
    turning the phrase into a dynamic phrase. Upon phrase expansion, the
    tags are replaced with text. For example, the ``date`` tag is
-   replaced with the current date and time. For details, see `Dynamic
-   Phrases, Using Macros as placeholders in
-   Phrases <../wiki/Dynamic-Phrases,-Using-Macros-as-placeholders-in-Phrases>`__
+   replaced with the current date and time. For details, see 
+   `Phrases <https://github.com/autokey/autokey/wiki/Phrases>`__.
 
 How are things organized?
 -------------------------
