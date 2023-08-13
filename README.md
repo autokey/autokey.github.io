@@ -43,6 +43,13 @@ Basic workflow:
 * Deploys to Github Pages for this repository
 
 
+## Maintenance of GitHub Actions
+When a pull request is merged in, its action will need to be run manually to apply the changes by rebuilding the documentation pages:
+1. Go to [Build Autokey pages](https://github.com/autokey/autokey.github.io/actions/workflows/pages.yml)
+2. Press the **Run** button
+3. Wait for the process to finish.
+
+
 ## TODO
 There is a plugin that supports versioned documentation, [sphinxcontrib-multiversion](https://github.com/Holzhaus/sphinx-multiversion) which seems to be decently well maintained.
 
