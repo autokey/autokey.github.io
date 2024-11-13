@@ -44,10 +44,18 @@ Basic workflow:
 
 
 ## Maintenance of GitHub Actions
-When a pull request is merged in, its action will need to be run manually to apply the changes by rebuilding the documentation pages:
-1. Go to [Build Autokey pages](https://github.com/autokey/autokey.github.io/actions/workflows/pages.yml)
-2. Press the **Run** button
-3. Wait for the process to finish.
+When a pull request is merged in, its action will need to be run manually to rebuild the documentation pages:
+1. Pick one:
+   * Navigate to the workflow:
+     1. Open the [repository](https://github.com/autokey/autokey.github.io).
+     2. Open the **Actions** menu.
+     3. Choose **Build AutoKey pages** in the left pane.
+   * Go directly to the workflow from here:
+     1. Go to [Build Autokey pages](https://github.com/autokey/autokey.github.io/actions/workflows/pages.yml)
+2. Click the **Run workflow** drop-down in the right pane.
+3. Click the **Run workflow** button in the context menu.
+4. Wait for the process to finish.
+5. Open the [new documentation](https://autokey.github.io/index.html) and check if the change looks good or if further work is needed.
 
 
 ## TODO
