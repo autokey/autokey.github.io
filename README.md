@@ -37,7 +37,7 @@ Basic workflow:
 
 
 ## Run GitHub actions after documentation changes
-When a pull request is merged in, its action will need to be run manually to rebuild the documentation pages:
+When changes are made to the documentation, the GitHub actions will need to be run manually to rebuild the documentation pages:
 1. Pick one:
    * Navigate to the workflow:
      1. Open the [repository](https://github.com/autokey/autokey.github.io).
