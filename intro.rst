@@ -41,7 +41,8 @@ apply to AutoKey, will make understanding the AutoKey much easier.
    turning the phrase into a dynamic phrase. Upon phrase expansion, the
    tags are replaced with text. For example, the ``date`` tag is
    replaced with the current date and time. For details, see 
-   `Phrases <https://github.com/autokey/autokey/wiki/Phrases>`__.
+   `Create dynamic phrases by using macros as placeholders 
+   <https://github.com/autokey/autokey/wiki/Phrases#create-dynamic-phrases-by-using-macros-as-placeholders>`__.
 
 How are things organized?
 -------------------------
