@@ -9,3 +9,4 @@
 - Update all sections in the [README.md](https://github.com/autokey/autokey.github.io/blob/master/README.md) file and add a section.
 - Fix broken link in the [intro.rst](https://github.com/autokey/autokey.github.io/blob/master/intro.rst) file.
 - Bump **sphinx** and **enum-tools** versions in the [requirements.txt](https://github.com/autokey/autokey.github.io/blob/master/requirements.txt) file.
+- Fix invalid syntax in the [intro.rst](https://github.com/autokey/autokey.github.io/blob/master/intro.rst) file.
