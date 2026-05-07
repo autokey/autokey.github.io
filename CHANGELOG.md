@@ -11,3 +11,5 @@
 - Bump **sphinx** and **enum-tools** versions in the [requirements.txt](https://github.com/autokey/autokey.github.io/blob/master/requirements.txt) file.
 - Fix invalid syntax in the [intro.rst](https://github.com/autokey/autokey.github.io/blob/master/intro.rst) file.
 - Fix invalid indentation in the [api.rst](https://github.com/autokey/autokey.github.io/blob/master/api.rst) file.
+- Bump GitHub actions in the [pages.yml](https://github.com/autokey/autokey.github.io/blob/master/.github/workflows/pages.yml) file.
+  
