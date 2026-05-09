@@ -16,3 +16,4 @@
 - 2026-05-05 - Bump GitHub actions in the [pages.yml](https://github.com/autokey/autokey.github.io/blob/master/.github/workflows/pages.yml) file.
 - 2026-05-07 - Update the [CHANGELOG,d](https://github.com/autokey/autokey.github.io/blob/master/CHANGELOG.md) file to include AutoKey versions and date-stamps.
 - 2026-05-08 - Bump versions in the [requirements.txt](https://github.com/autokey/autokey.github.io/blob/master/requirements.txt) file.
+- 2026-05-08 - Revert the version bump to **sphinx** in the [requirements.txt](https://github.com/autokey/autokey.github.io/blob/master/requirements.txt) file.
