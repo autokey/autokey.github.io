@@ -19,3 +19,4 @@
 - 2026-05-08 - Revert the version bump to **sphinx** in the [requirements.txt](https://github.com/autokey/autokey.github.io/blob/master/requirements.txt) file.
 - 2026-05-12 - Add new **guides** directory with the empty `.gitkeep` file in it as a temporary placeholder.
 - 2026-05-12 - Add a guide for local HTML documentation builds and remove the temporary `.gitkeep` file from the directory.
+- 2026-05-12 - Update Sphinx and other dependencies in the `requirements.txt` file.
