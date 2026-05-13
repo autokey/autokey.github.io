@@ -17,5 +17,6 @@
 - 2026-05-07 - Update the [CHANGELOG,d](https://github.com/autokey/autokey.github.io/blob/master/CHANGELOG.md) file to include AutoKey versions and date-stamps.
 - 2026-05-08 - Bump versions in the [requirements.txt](https://github.com/autokey/autokey.github.io/blob/master/requirements.txt) file.
 - 2026-05-08 - Revert the version bump to **sphinx** in the [requirements.txt](https://github.com/autokey/autokey.github.io/blob/master/requirements.txt) file.
+- 2026-05-12 - Add the `tox.ini` configuration file for use in testing.
 - 2026-05-12 - Add the missing **_static** directory and populate it with the empty `.gitkeep` file as a temporary placeholder.
 - 2026-05-12 - Update Sphinx and other dependencies in the `requirements.txt` file.
