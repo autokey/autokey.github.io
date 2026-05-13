@@ -18,3 +18,4 @@
 - 2026-05-08 - Bump versions in the [requirements.txt](https://github.com/autokey/autokey.github.io/blob/master/requirements.txt) file.
 - 2026-05-08 - Revert the version bump to **sphinx** in the [requirements.txt](https://github.com/autokey/autokey.github.io/blob/master/requirements.txt) file.
 - 2026-05-12 - Add new **guides** directory with the empty `.gitkeep` file in it as a temporary placeholder.
+- 2026-05-12 - Refactor the `index.rst` file to include the **Indices and Tables** section only in HTML builds.
