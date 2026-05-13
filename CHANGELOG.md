@@ -19,4 +19,6 @@
 - 2026-05-08 - Revert the version bump to **sphinx** in the [requirements.txt](https://github.com/autokey/autokey.github.io/blob/master/requirements.txt) file.
 - 2026-05-12 - Add new **guides** directory with the empty `.gitkeep` file in it as a temporary placeholder.
 - 2026-05-12 - Update configuration for **Sphinx** documentation builder by adding the **SimplePDF** extension, enhancing path-logic, and isolating local and remote build environments.
+- 2026-05-12 - Add the `tox.ini` configuration file for use in testing.
+- 2026-05-12 - Add the missing **_static** directory and populate it with the empty `.gitkeep` file as a temporary placeholder.
 - 2026-05-12 - Update Sphinx and other dependencies in the `requirements.txt` file.
