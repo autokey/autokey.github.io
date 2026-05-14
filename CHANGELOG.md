@@ -18,6 +18,7 @@
 - 2026-05-08 - Bump versions in the [requirements.txt](https://github.com/autokey/autokey.github.io/blob/master/requirements.txt) file.
 - 2026-05-08 - Revert the version bump to **sphinx** in the [requirements.txt](https://github.com/autokey/autokey.github.io/blob/master/requirements.txt) file.
 - 2026-05-12 - Add new **guides** directory with the empty `.gitkeep` file in it as a temporary placeholder.
+- 2026-05-12 - Update the `pages.yml` workflow to modernize system-header build dependencies and add support for **dbus**.
 - 2026-05-12 - Refactor the `index.rst` file to include the **Indices and Tables** section only in HTML builds.
 - 2026-05-12 - Update configuration for **Sphinx** documentation builder by adding the **SimplePDF** extension, enhancing path-logic, and isolating local and remote build environments.
 - 2026-05-12 - Add the `tox.ini` configuration file for use in testing.
