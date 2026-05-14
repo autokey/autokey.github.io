@@ -1,61 +1,79 @@
 # Configuration file for the Sphinx documentation builder.
 #
 # This file only contains a selection of the most common options. For a full
-# list see the documentation:
+# list, see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
 # -- Path setup --------------------------------------------------------------
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
-# documentation root, use os.path.abspath to make it absolute, like shown here.
+# documentation root, use os.path.abspath to make it absolute, as shown here.
 #
 import os
 import sys
 import re
 
-# pulled from autokey/setup.py
+# -- Source information -----------------------------------------------------
+
+# Determine the absolute path to this conf.py file:
+base_path = os.path.dirname(os.path.abspath(__file__))
+
+# Define the two possible paths for the AutoKey source code
+# 1. Local/Tox path: autokey is a sibling to the docs folder:
+local_path = os.path.join(base_path, "..", "autokey")
+# 2. GitHub Actions path: autokey is inside the docs folder:
+github_path = os.path.join(base_path, "autokey")
+
+# Select the correct path based on which one actually exists and print a breadcrumb for the logs:
+if os.path.exists(local_path):
+    # This is what you'll see in your local tox tests:
+    print("Sphinx Config: Using local/tox path structure")
+    autokey_root = local_path
+else:
+    # This is what you'll see in the GitHub Action logs:
+    print("Sphinx Config: Using GitHub Actions path structure")
+    autokey_root = github_path
+
+# Point Sphinx to the library so it can generate API docs:
+sys.path.insert(0, os.path.join(autokey_root, "lib"))
+
+# Pulled from the autokey/setup.py logic:
 def get_autokey_version():
-    source_file_name = "./autokey/lib/autokey/common.py"
-    with open(source_file_name, "r") as metadata_source_file:
-        source = metadata_source_file.read()
-    if not source:
-        print("Cannot read AutoKey source file containing required information. Unreadable: {}".format(
-            source_file_name))
+    source_file_name = os.path.join(autokey_root, "lib", "autokey", "common.py")
+    
+    try:
+        with open(source_file_name, "r") as metadata_source_file:
+            source = metadata_source_file.read()
+    except FileNotFoundError:
+        print(f"Critical Error: Cannot find AutoKey source at {source_file_name}")
         sys.exit(1)
 
     def search_for(pattern: str) -> str:
-        return re.search(
-            r"""^{}\s*=\s*('(.*)'|"(.*)")""".format(pattern),  # Search for assignments: VAR = 'VALUE' or VAR = "VALUE"
+        match = re.search(
+            r"""^{}\s*=\s*('(.*)'|"(.*)")""".format(pattern),
             source,
             re.M
-        ).group(1)[1:-1]  # Cut off outer quotation marks
+        )
+        return match.group(1)[1:-1] if match else "unknown"
 
     return search_for("VERSION")
 
-
-
-#TODO this needs to be dealt with for github actions
-# different local path for master documentation
-# sys.path.insert(0, os.path.abspath('/home/sam/git/ak/lib'))
-sys.path.insert(0, os.path.abspath('./ak_temp/lib'))
-
-
 # -- Project information -----------------------------------------------------
 
-project = 'AutoKey Main'
-# is there some way to have this be a link to github authors page?
+# Project name is used in browser tabs and PDF document title page:
+project = 'AutoKey'
+# Is there some way to have this be a link to github authors page?
 copyright = '2023, Various'
 author = 'Various'
 
-# The full version, including alpha/beta/rc tags
+# The full version, including alpha/beta/rc tags:
 release = version = get_autokey_version()
 
 # -- General configuration ---------------------------------------------------
 
-# Add any Sphinx extension module names here, as strings. They can be
-# extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
-# ones.
+# Add any Sphinx extension module names here as strings. They can be
+# extensions coming with Sphinx (named 'sphinx.ext.*') or custom ones:
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.viewcode',
@@ -65,14 +83,13 @@ extensions = [
     'enum_tools.autoenum'
 ]
 
+# Map file extensions to their respective markup languages:
+source_suffix = {
+    '.rst': 'restructuredtext',
+    '.md': 'markdown',
+}
 
-# source_suffix = [
-    # '.rst': 'restructuredtext',
-    # '.md': 'markdown',
-
-# ]
-
-# Add any paths that contain templates here, relative to this directory.
+# Add any paths that contain templates here, relative to this directory:
 templates_path = ['_templates']
 
 # List of patterns, relative to source directory, that match files and
@@ -85,20 +102,31 @@ exclude_patterns = [
     'README.md',
     'scripts',
     'old_wiki', #moved temporarily
+    '.venv',
+    '**/.venv',
 ]
 
 
 # -- Options for HTML output -------------------------------------------------
 
-# The theme to use for HTML and HTML Help pages.  See the documentation for
-# a list of builtin themes.
-#
+# The theme to use for HTML and HTML Help pages. See the Sphinx documentation
+# for a list of built-in themes:
 html_theme = 'sphinx_rtd_theme'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
-# so a file named "default.css" will overwrite the builtin "default.css".
+# so a file named "default.css" will overwrite the builtin "default.css":
 html_static_path = ['_static']
+# Only apply custom CSS style to PDF builds:
+if 'simplepdf' in sys.argv:
+    html_css_files = ['custom.css']
+else:
+    html_css_files = []
+# Only suppress creation of "Indices and Tables" for PDF builds:
+if 'simplepdf' in sys.argv:
+    html_use_index = False
+else:
+    html_use_index = True
 html_logo = 'autokey.png'
 html_theme_options = {
     'logo_only': True,
@@ -106,8 +134,8 @@ html_theme_options = {
 }
 html_favicon = 'favicon.ico'
 
-#TODO make this point to wherever the source files are goint to be hosted
-# this enables the "edit on github behavior for the top right corners of webpages
+# This points to wherever the source files are hosted and enables the
+# "Edit on GitHub behavior for the top right corners of the pages:
 html_context = {
     'display_github': True,
     'github_user': 'autokey',
@@ -123,8 +151,8 @@ autodoc_mock_imports = [
     "Tkinter"
 ]
 
-# this code is to workaround the module docstring being posted at the top of every
-# api page.
+# This is a work-around for the module docstring being posted at the 
+# top of every API page:
 def skip_modules_docstring(app, what, name, obj, options, lines):
     print(what, name)
     if what == 'module':
@@ -133,3 +161,14 @@ def skip_modules_docstring(app, what, name, obj, options, lines):
 
 def setup(app):
     app.connect('autodoc-process-docstring', skip_modules_docstring)
+
+# -- Options for PDF output -------------------------------------------------
+
+# Use AutoKey release version in PDF file name:
+simplepdf_file_name = f"AutoKey_v{release}.pdf"
+# Control style of the PDF and its single-file HTML artifact:
+simplepdf_vars = {
+    'primary': '#598bb9',   # use for accents
+    'cover-bg': '#598bb9',  # use for cover page
+    'cover': '#ffffff',     # use for cover text
+}
