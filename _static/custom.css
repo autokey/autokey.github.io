@@ -1,0 +1,4 @@
+/* This targets pages other than the cover page specifically for use by SimplePDF */
+body, .page {
+	background-color: #fafbfc!important;
+	}
