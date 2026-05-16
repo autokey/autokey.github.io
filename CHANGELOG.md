@@ -28,3 +28,4 @@
 - 2026-05-12 - Update Sphinx and other dependencies in the `requirements.txt` file.
 - 2026-05-14 - Add the **custom.css** file to the **_static** directory and populate it with a selector combination for styling PDF archives of the documentation.
 - 2026-05-14 - Make corrections to the `build-local.md` file for clarity and accuracy.
+- 2026-05-16 - Add a guide for building local PDF documentation.
