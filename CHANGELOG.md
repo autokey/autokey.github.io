@@ -2,6 +2,7 @@
 
 ## Version 0.97.0~beta0
 <!-- ⬇️ ALWAYS INSERT NEW BULLETED ITEMS DIRECTLY BELOW THIS LINE ⬇️ -->
+- Remove the no-longer-needed `.gitignore` file from the `_static` directory.
 - Reorganize the [CHANGELOG.md](https://github.com/autokey/autokey.github.io/blob/master/CHANGELOG.md) file.
 - Add a guide for building a zip archive of the HTML documentation.
 - Add a guide for building local PDF documentation.
