@@ -2,6 +2,7 @@
 
 ## Version 0.97.0~beta0
 <!-- ⬇️ ALWAYS INSERT NEW BULLETED ITEMS DIRECTLY BELOW THIS LINE ⬇️ -->
+- Add a guide for building a tarball archive of the HTML documentation.
 - Migrate [dependencies update procedure](https://github.com/autokey/autokey.github.io/blob/master/README.md#update-the-dependencies) to a stand-alone guide.
 - Migrate [update actions procedure](https://github.com/autokey/autokey.github.io/blob/master/README.md#update-the-actions) to a stand-alone guide.
 - Remove the no-longer-needed `.gitignore` file from the `_static` directory.
