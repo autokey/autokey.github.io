@@ -1,64 +1,97 @@
 # Build a zip archive of the HTML documentation files
-You can generate a zip file from the HTML documentation files as an archive that can be shared and used to access the documentation offline.
-1. Update the system packages:
+This is a stand-alone guide that uses **Sphinx** (the Python documentation generator) to build the AutoKey HTML documentation files locally and generates a **zip** from them that can be shared and used to access the documentation offline. The guide is intended to be used in a clean, new virtual machine with a fresh installation of **Ubuntu** in it.
+1. Boot into a fresh copy of **Ubuntu 22.04** or **Ubuntu 24.04** in a new virtual machine.
+2. Open a terminal window.
+3. Update the system packages:
    ```bash
    sudo apt update
    ```
-2. Install the core packages:
+4. Install the core packages:
    ```bash
    sudo apt install -y git python3-pip python3-venv zip
    ```
-3. Create the `**clones** directory:
+5. Create the **clones** directory:
    ```bash
-   mkdir -p ~/clones
+   mkdir ~/clones
    ```
-4. Change to the **clones** directory:
+6. Change to the **clones** directory:
    ```bash
-   cd clones
+   cd ~/clones
    ```
-5. Clone the **AutoKey** and **AutoKey documentation** repositories as siblings in the current directory:
+7. Clone the **AutoKey** and **AutoKey documentation** repositories as siblings in the current directory:
    ```bash
    git clone https://github.com/autokey/autokey.git && git clone https://github.com/autokey/autokey.github.io.git
    ```
-6. Create a virtual environment:
+8. Create a virtual environment:
    ```bash
    python3 -m venv --system-site-packages .venv
    ```
-7. Activate the virtual environment (your prompt will change):
+9. Activate the virtual environment (your prompt will change):
    ```bash
    source .venv/bin/activate
    ```
-8. Change to the **AutoKey documentation** directory:
-   ```bash
-   cd autokey.github.io
-   ```
-9. Install the necessary dependencies:
-   *(Note: pyasyncore, pyinotify, and python-xlib are required for modern Ubuntu builds)*
-   ```bash
-   pip install pyasyncore pyinotify python-xlib -r requirements.txt
-   ```
-10. Generate a fresh build of the documentation:
+10. Navigate to the documentation directory:
+    ```bash
+    cd autokey.github.io
+    ```
+11. Install the core packages:
+    ```bash
+    pip install pyasyncore pyinotify python-xlib -r requirements.txt
+    ```
+12. Check the links in the documentation before doing the build:
+    1. Check the validity of the links in the documentation:
+       ```bash
+       make linkcheck
+       ```
+    2. If there are errors, follow the suggestions **Sphinx** provides in the output for fixing them.
+13. Generate a fresh, local build of the documentation:
     ```bash
     make clean html
     ```
-11. Verify the build by viewing the generated documentation in your browser:
+14. Preview the built documentation in your browser:
     ```bash
     xdg-open _build/html/index.html 2>/dev/null
     ```
-12. Create the zip archive from the HTML files:
-    1. Extract the release version from the `conf.py` file:
+15. Create the **zip** from the documentation:
+    1. Fetch the **AutoKey** version identifier:
        ```bash
        VERSION=$(python3 -c "import conf; print(conf.release)" | tail -n 1)
        ```
-    2. Create the zip archive from inside the **html** folder, storing its contents at the root of the zip file and using the extracted version for the name:
+    2. Navigate to the `_build/html` directory:
        ```bash
-       (cd _build/html && zip -r "../../autokey-docs_v${VERSION}.zip" .)
+       cd _build/html
        ```
-    3. Save the zip file to your home directory:
+    3. Create the versioned **zip**:
        ```bash
-       mv autokey-docs_v*.zip ~/
+       zip -r ~/autokey-docs-${VERSION}.zip *
        ```
-13. Clean up afterwards:
+16. Verify that the **zip** is good:
+    * Check the file-count (there should be 2 more files in the source directory than in the **zip**):
+      1. Navigate to your home directory:
+         ```bash
+         cd
+         ```
+      2. Check the file-count of the source directory:
+         ```bash
+         find ~/clones/autokey.github.io/_build/html | wc -l
+         ```
+      3. Check the file-count in the **zip**:
+         ```bash
+         zipinfo -1 autokey-docs-*.zip | wc -l
+         ```
+    * Check the integrity of the **zip** by using **unzip**:
+      ```bash
+      unzip -qt autokey-docs-*.zip
+      ```
+    * Check the integrity of the **zip** by using **zip**:
+      ```bash
+      zip -T autokey-docs-*.zip
+      ```
+    * Check the archive layout and contents without extracting them:
+      ```bash
+      unzip -l autokey-docs-*.zip
+      ```
+17. Clean up afterwards:
     1. Deactivate the virtual environment:
        ```bash
        deactivate
@@ -73,9 +106,38 @@ You can generate a zip file from the HTML documentation files as an archive that
        ```
 
 ### Notes:
-* Interpret the output:
-  * You may see some warnings, like these, in the log:
+* Interpret the build output:
+  * You may see some warnings, like these, in the log when building the documentation:
     * The **UserWarning: Container node skipped:** warning is just **recommonmark** (the **Markdown** parser) being a bit chatty. You can safely ignore it.
     * The **SyntaxWarning: invalid escape sequence '\+':** is a classic **Python 3.12+** warning. Somewhere in the AutoKey code, there’s a string (likely a Regex) using a backslash that isn't a "raw" string. It’s a tiny bug in the source code, but it won't break your documentation. It can be dealt with by using `r"""` on the offending docstring(s).
     * The **toctree:** warnings (for example, the one warning that the `CHANGELOG.md` file isn't in a **toctree**) means that there’s no link to that file in the main sidebar menu.
-* To use the archive, unzip it and open the `index.html` file. Note that the search bar and some local links may fail offline due to browser security restrictions.
+* The **-1** option (it's a number - not an L) on the **zipinfo** command tells **zipinfo** to print only the names of the files and directories, one per line, with no extra headers.
+* The 2-file discrepancy between the number of files in the source directory and the **zip** is expected because the shell wildcard used during compression ignores the single-dot (.) root directory and the hidden **Sphinx** `.buildinfo` artifact file.
+* The **zip** will contain the **Sphinx** standardized directory structure:
+  ```text
+  autokey-docs-[VERSION].zip
+  ├── api/
+  ├── _modules/
+  ├── _sources/
+  ├── _static/
+  ├── index.html
+  └── [other root .html files]
+  ```
+  * The **api** subdirectory contains the generated **HTML** pages for the project's **API** code references.
+  * The **_modules** sub-directory contains syntax-highlighted **HTML** copies of the **Python** source-code modules.
+  * The **_sources** sub-directory contains the raw, uncompiled **reStructuredText (.rst)** or **Markdown (.md)** files used for building each page.
+  * The **_static** sub-directory contains stylesheet assets, like **CSS**, **JavaScript** files, fonts, and graphics used for rendering the layout.
+* This guide defaults to building the documentation locally from the **master** branch. Depending on your needs, choose one of these options for the **AutoKey** clone in **step 7** above:
+  * Clone the **develop** branch:
+    ```bash
+    git clone --branch develop --single-branch https://github.com/autokey/autokey.git
+    ```
+  * Clone the **master** branch (current release):
+    ```bash
+    git clone https://github.com/autokey/autokey.git
+    ```
+  * Clone a **pull request**, replacing **123** with the pull request number:
+    ```bash
+    PR=123; git clone https://github.com/autokey/autokey.git && (cd autokey && git fetch origin pull/$PR/head:pull_$PR && git checkout pull_$PR)
+    ```
+* To use the archive, unzip it and open the `index.html` file. Note that the search bar and some local links may fail offline due to browser security-restrictions.
