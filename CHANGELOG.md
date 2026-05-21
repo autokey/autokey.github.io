@@ -2,6 +2,7 @@
 
 ## Version 0.97.0~beta0
 <!-- ⬇️ ALWAYS INSERT NEW BULLETED ITEMS DIRECTLY BELOW THIS LINE ⬇️ -->
+- Add a guide for building a tarball archive of the HTML documentation.
 - Make necessary changes to the [build-zip.md](guides/build-zip.md) guide.
 - Add  clone options to the [build-pdf.md](https://github.com/autokey/autokey.github.io/blob/master/guides/build-pdf.md) guide.
 - Add  clone options to the [build-local.md](https://github.com/autokey/autokey.github.io/blob/master/guides/build-local.md) guide.
