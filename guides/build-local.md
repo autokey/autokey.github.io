@@ -64,3 +64,17 @@ This is a stand-alone guide that provides the steps needed to build the document
        ```bash
        rm -rf ~/clones/
        ```
+### Notes
+* This guide defaults to building the documentation locally from the **master** branch. Depending on your needs, choose one of these options for the **AutoKey** clone in **step 7** above:
+  * Clone the **develop** branch:
+    ```bash
+    git clone --branch develop --single-branch https://github.com/autokey/autokey.git
+    ```
+  * Clone the **master** branch (current release):
+    ```bash
+    git clone https://github.com/autokey/autokey.git
+    ```
+  * Clone a **pull request**, replacing **123** with the pull request number:
+    ```bash
+    PR=123; git clone https://github.com/autokey/autokey.git && (cd autokey && git fetch origin pull/$PR/head:pull_$PR && git checkout pull_$PR)
+    ```
