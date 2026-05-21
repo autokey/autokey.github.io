@@ -48,11 +48,15 @@ This stand-alone guide provides the steps needed to use **tox** to run local com
     3. Check if the function names and descriptions are visible. If you see names, but no descriptions, or you encounter a **Module not found** error, verify that the **AutoKey** repository was cloned correctly into the `~/clones` directory.
 12. To share the test results, copy the terminal output and paste it into a GitHub Markdown code-block or paste it into a file on your desktop or in your home directory for sharing later.
 13. Clean up the environment:
-    1. Change out of the **clones** directory:
+    1. Deactivate the **tox** virtual environment:
+       ```bash
+       deactivate
+       ```
+    2. Change out of the **clones** directory:
        ```bash
        cd
        ```
-    2. Remove the **clones** directory:
+    3. Remove the **clones** directory:
        ```bash
        rm -rf ~/clones
        ```
