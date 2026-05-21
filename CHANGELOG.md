@@ -2,6 +2,7 @@
 
 ## Version 0.97.0~beta0
 <!-- ⬇️ ALWAYS INSERT NEW BULLETED ITEMS DIRECTLY BELOW THIS LINE ⬇️ -->
+- Add deactivation of the **tox** virtual environment to the cleanup steps in the [test-local.md](https://github.com/autokey/autokey.github.io/blob/master/guides/test-local.md) file.
 - Add a guide for running **tox** tests on a local copy of the documentation.
 - Add a guide for building a tarball archive of the HTML documentation.
 - Make necessary changes to the [build-zip.md](guides/build-zip.md) guide.
