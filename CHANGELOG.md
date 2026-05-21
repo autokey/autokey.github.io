@@ -3,6 +3,7 @@
 ## Version 0.97.0~beta0
 <!-- ⬇️ ALWAYS INSERT NEW BULLETED ITEMS DIRECTLY BELOW THIS LINE ⬇️ -->
 - Add  clone options to the [build-pdf.md](https://github.com/autokey/autokey.github.io/blob/master/guides/build-pdf.md) guide.
+- Add  clone options to the [build-local.md](https://github.com/autokey/autokey.github.io/blob/master/guides/build-local.md) guide.
 - Migrate [dependencies update procedure](https://github.com/autokey/autokey.github.io/blob/master/README.md#update-the-dependencies) to a stand-alone guide.
 - Migrate [update actions procedure](https://github.com/autokey/autokey.github.io/blob/master/README.md#update-the-actions) to a stand-alone guide.
 - Remove the no-longer-needed `.gitignore` file from the `_static` directory.
