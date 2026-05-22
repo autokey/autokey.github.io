@@ -2,6 +2,7 @@
 
 ## Version 0.97.0~beta0
 <!-- ⬇️ ALWAYS INSERT NEW BULLETED ITEMS DIRECTLY BELOW THIS LINE ⬇️ -->
+- Add a guide for simulating a **GitHub CI workflow** for confidence in local and remote behavior.
 - Add a guide for running **tox** tests on a local copy of the documentation.
 - Add a guide for building a tarball archive of the HTML documentation.
 - Make necessary changes to the [build-zip.md](guides/build-zip.md) guide.
