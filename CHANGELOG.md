@@ -2,6 +2,7 @@
 
 ## Version 0.97.0~beta0
 <!-- ⬇️ ALWAYS INSERT NEW BULLETED ITEMS DIRECTLY BELOW THIS LINE ⬇️ -->
+- Update the comments in the `conf.py` file for clarity and succinctness.
 - Migrate the **Run the actions after documentation changes** section of the [README.md](README.md) file to the `rebuild-site.md` stand-alone guide.
 - Add a guide for simulating a **GitHub CI workflow** for confidence in local and remote behavior.
 - Add a guide for running **tox** tests on a local copy of the documentation.
