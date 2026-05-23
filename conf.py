@@ -65,7 +65,6 @@ project = 'AutoKey'
 # Is there some way to have this be a link to github authors page?
 copyright = '2023, Various'
 author = 'Various'
-
 # The full version, including alpha/beta/rc tags:
 release = version = get_autokey_version()
 
@@ -118,21 +117,25 @@ html_theme = 'sphinx_rtd_theme'
 # static files (such as style-sheets). These files are copied over after the
 # built-in static files, overwriting them:
 html_static_path = ['_static']
+
 # Only apply custom CSS style to PDF builds:
 if 'simplepdf' in sys.argv:
     html_css_files = ['custom.css']
 else:
     html_css_files = []
+
 # Only suppress creation of "Indices and Tables" for PDF builds:
 if 'simplepdf' in sys.argv:
     html_use_index = False
 else:
     html_use_index = True
+
 html_logo = 'autokey.png'
 html_theme_options = {
     'logo_only': True,
     'display_version': True,
 }
+
 html_favicon = 'favicon.ico'
 
 # Location of the hosted source files passed to templates. Enables the
