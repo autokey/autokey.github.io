@@ -2,6 +2,7 @@
 
 ## Version 0.97.0~beta0
 <!-- ⬇️ ALWAYS INSERT NEW BULLETED ITEMS DIRECTLY BELOW THIS LINE ⬇️ -->
+- Add a guide for bumping version-references in repository-maintenance guides that contain them.
 - Add and remove white-space in the `conf.py` file for layout improvement.
 - Update the comments in the `conf.py` file for clarity and succinctness.
 - Migrate the **Run the actions after documentation changes** section of the [README.md](README.md) file to the `rebuild-site.md` stand-alone guide.
