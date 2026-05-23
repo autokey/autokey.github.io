@@ -156,7 +156,7 @@ autodoc_mock_imports = [
 
 # Work-around for the module docstring being posted at the top of every API
 # page:
-ddef skip_modules_docstring(app, what, name, obj, options, lines):
+def skip_modules_docstring(app, what, name, obj, options, lines):
     print(what, name)
     if what == 'module':
         print(what, name, lines)
