@@ -2,6 +2,7 @@
 
 ## Version 0.97.0~beta0
 <!-- ⬇️ ALWAYS INSERT NEW BULLETED ITEMS DIRECTLY BELOW THIS LINE ⬇️ -->
+- Fix the version-identifier syntax in the `build-tar.md` and `build-zip.md` files.
 - Reorganize the **extensions** list in the `conf.py` file.
 - Add a guide for bumping version-references in repository-maintenance guides that contain them.
 - Add and remove white-space in the `conf.py` file for layout improvement.
