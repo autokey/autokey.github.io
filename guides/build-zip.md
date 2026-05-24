@@ -55,7 +55,7 @@ This is a stand-alone guide that uses **Sphinx** (the Python documentation gener
 15. Create the **zip** from the documentation:
     1. Fetch the **AutoKey** version identifier:
        ```bash
-       VERSION=$(python3 -c "import conf; print(conf.release)" | tail -n 1)
+       VERSION=$(python3 -Bc "import conf; print(conf.release)" | tail -n 1)
        ```
     2. Navigate to the `_build/html` directory:
        ```bash
