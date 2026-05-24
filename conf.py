@@ -74,12 +74,15 @@ release = version = get_autokey_version()
 # processed in the listed order. Both native (named 'sphinx.ext.*') and
 # custom extensions are accepted:
 extensions = [
+    # Core Sphinx extensions:
     'sphinx.ext.autodoc',
     'sphinx.ext.viewcode',
+    # Format parsers and styling:
     'recommonmark',
     'sphinx_rtd_theme',
+    # Third-party code documenters:
+    'enum_tools.autoenum',
     'sphinx_epytext',
-    'enum_tools.autoenum'
 ]
 
 # Map file extensions to their respective markup languages:
