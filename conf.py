@@ -100,11 +100,11 @@ templates_path = ['_templates']
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = [
     '_build',
-    'Thumbs.db',
     '.DS_Store',
+    'old_wiki', #moved temporarily
     'README.md',
     'scripts',
-    'old_wiki', #moved temporarily
+    'Thumbs.db',
     '.venv',
     '**/.venv',
 ]
@@ -153,9 +153,9 @@ html_context = {
 # List of modules used by the sphinx.ext.autodoc extension to tell Sphinx to
 # fake (mock) specific Python modules during the documentation build process.
 autodoc_mock_imports = [
-    "PyQt5",
     "gi",
     "pyatspi",
+    "PyQt5",
     "tkinter",
     "Tkinter"
 ]
@@ -178,7 +178,7 @@ def setup(app):
 simplepdf_file_name = f"AutoKey_v{release}.pdf"
 # Control style of the PDF and its single-file HTML artifact:
 simplepdf_vars = {
-    'primary': '#598bb9',   # use for accents
-    'cover-bg': '#598bb9',  # use for cover page
     'cover': '#ffffff',     # use for cover text
+    'cover-bg': '#598bb9',  # use for cover page
+    'primary': '#598bb9',   # use for accents
 }
