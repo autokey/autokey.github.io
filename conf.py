@@ -93,7 +93,9 @@ source_suffix = {
 
 # List of paths, relative to the documentation root directory, that contain
 # templates:
-templates_path = ['_templates']
+templates_path = [
+    '_templates',
+]
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -109,7 +111,6 @@ exclude_patterns = [
     '**/.venv',
 ]
 
-
 # -- HTML configuration ------------------------------------------------------
 
 # The theme to use for HTML and HTML Help pages. See the Sphinx documentation
@@ -119,7 +120,9 @@ html_theme = 'sphinx_rtd_theme'
 # List of paths, relative to the documentation root directory, to custom
 # static files (such as style-sheets). These files are copied over after the
 # built-in static files, overwriting them:
-html_static_path = ['_static']
+html_static_path = [
+    '_static',
+]
 
 # Only apply custom CSS style to PDF builds:
 if 'simplepdf' in sys.argv:
