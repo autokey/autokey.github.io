@@ -55,6 +55,8 @@ def get_autokey_version():
             source,
             re.M
         )
+        # match.group(1) captures the outer quotes along with the text.
+        # [1:-1] removes the outer quotes to yield just the version.
         return match.group(1)[1:-1] if match else "unknown"
 
     return search_for("VERSION")
