@@ -2,6 +2,7 @@
 
 ## Version 0.97.0~beta0
 <!-- ⬇️ ALWAYS INSERT NEW BULLETED ITEMS DIRECTLY BELOW THIS LINE ⬇️ -->
+- Add version-extraction comments to the `conf.py` file.
 - Adjust the layout of two lists in the `conf.py` file from horizontal to vertical.
 - Rearrange some list and dictionary entries alphabetically in the `conf.py` file.
 - Fix the version-identifier syntax in the `build-tar.md` and `build-zip.md` files.
