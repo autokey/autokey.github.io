@@ -57,6 +57,7 @@ def get_autokey_version():
         )
         # match.group(1) captures the outer quotes along with the text.
         # [1:-1] removes the outer quotes to yield just the version.
+        # The full version, including alpha/beta/rc tags, is returned:
         return match.group(1)[1:-1] if match else "unknown"
 
     return search_for("VERSION")
@@ -67,7 +68,6 @@ project = 'AutoKey'
 # Is there some way to have this be a link to github authors page?
 copyright = '2023, Various'
 author = 'Various'
-# The full version, including alpha/beta/rc tags:
 release = version = get_autokey_version()
 
 # -- General configuration ---------------------------------------------------
