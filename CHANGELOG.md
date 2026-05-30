@@ -2,6 +2,7 @@
 
 ## Version 0.97.0~beta0
 <!-- ⬇️ ALWAYS INSERT NEW BULLETED ITEMS DIRECTLY BELOW THIS LINE ⬇️ -->
+- Update print statements and author/copyright case in the `conf.py` file.
 - Move a version comment in the `conf.py` file to a more suitable location inside of its function.
 - Add version-extraction comments to the `conf.py` file.
 - Adjust the layout of two lists in the `conf.py` file from horizontal to vertical.
