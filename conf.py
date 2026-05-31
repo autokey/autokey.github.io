@@ -28,11 +28,11 @@ github_path = os.path.join(base_path, "autokey")
 # Select the correct path based on which one actually exists and print a breadcrumb to the log:
 if os.path.exists(local_path):
     # This is what you'll see in your local tox tests:
-    print("Sphinx Config: Using local/tox path structure")
+    print("Sphinx Config: Using local/tox path structure 🚀")
     autokey_root = local_path
 else:
     # This is what you'll see in the GitHub Action logs:
-    print("Sphinx Config: Using GitHub Actions path structure")
+    print("Sphinx Config: Using GitHub Actions path structure 🚀")
     autokey_root = github_path
 
 # Point Sphinx to the library so it can generate API docs:
@@ -66,8 +66,8 @@ def get_autokey_version():
 
 project = 'AutoKey'
 # Is there some way to have this be a link to github authors page?
-copyright = '2023, Various'
-author = 'Various'
+author = 'various'
+copyright = '2023, various'
 release = version = get_autokey_version()
 
 # -- General configuration ---------------------------------------------------
