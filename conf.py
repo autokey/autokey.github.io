@@ -103,12 +103,12 @@ templates_path = [
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = [
-    '_build',     # Sphinx build output directory
-    '.DS_Store',  # macOS hidden **Desktop Services Store* file
-    'guides/**',  # All guides including future potential sub-directories
-    '*.md',       # All markdown in the root directory
-    'Thumbs.db',  # Windows thumbnail cache
-    '**/.venv',   # Nested virtual environments
+    'autokey/**',      # Prevents Sphinx from tracking cloned code files as stand-alone pages
+    '**/.DS_Store/**', # Prevents Sphinx from tracking macOS hidden **Desktop Services Store* file
+    'guides/**',       # Prevents Sphinx from tracking all guides including future potential sub-directories
+    '*.md',            # Prevents Sphinx from tracking all markdown in the root directory
+    '**/Thumbs.db',    # Prevents Sphinx from tracking all nested Windows thumbnail cache
+   '**/.venv/**',      # Prevents Sphinx from tracking all nested virtual environments
 ]
 
 # -- HTML configuration ------------------------------------------------------
