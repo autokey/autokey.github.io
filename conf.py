@@ -104,10 +104,12 @@ templates_path = [
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = [
     'autokey/**',      # Prevents Sphinx from tracking cloned code files as stand-alone pages
-    '**/.DS_Store/**', # Prevents Sphinx from tracking macOS hidden **Desktop Services Store* file
+    '**/.DS_Store',    # Prevents Sphinx from tracking the macOS hidden **Desktop Services Store** file
+    '**/__MACOSX/**',  # Prevents Sphinx from tracking macOS zip metadata directories
+    '**/._*',          # Prevents Sphinx from tracking macOS AppleDouble metadata files
     'guides/**',       # Prevents Sphinx from tracking all guides including future potential sub-directories
-    '*.md',            # Prevents Sphinx from tracking all markdown in the root directory
-    '**/Thumbs.db',    # Prevents Sphinx from tracking all nested Windows thumbnail cache
+    '*.md',            # Prevents Sphinx from tracking all Markdown in the root directory
+    '**/Thumbs.db',    # Prevents Sphinx from tracking all nested Windows thumbnail caches
    '**/.venv/**',      # Prevents Sphinx from tracking all nested virtual environments
 ]
 
