@@ -2,6 +2,7 @@
 
 ## Version 0.97.0~beta0
 <!-- ⬇️ ALWAYS INSERT NEW BULLETED ITEMS DIRECTLY BELOW THIS LINE ⬇️ -->
+- Update the **PDF** comments in the `conf.py` file for clarity.
 - Move the **autodoc_mock_imports** list to a more appropriate location in the `conf.py` file.
 - Update the **exclude_patterns** list in the `conf.py` file.
 - Update print statements and author/copyright case in the `conf.py` file.
