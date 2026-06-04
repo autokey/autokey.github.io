@@ -135,13 +135,13 @@ html_static_path = [
     '_static',
 ]
 
-# Only apply custom CSS style to PDF builds:
+# Apply custom CSS style to PDF builds:
 if 'simplepdf' in sys.argv:
     html_css_files = ['custom.css']
 else:
     html_css_files = []
 
-# Only suppress creation of "Indices and Tables" for PDF builds:
+# Suppress creation of "Indices and Tables" for PDF builds:
 if 'simplepdf' in sys.argv:
     html_use_index = False
 else:
