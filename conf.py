@@ -113,6 +113,15 @@ exclude_patterns = [
    '**/.venv/**',      # Prevents Sphinx from tracking all nested virtual environments
 ]
 
+# List of modules used by the sphinx.ext.autodoc extension to tell Sphinx to
+# fake (mock) specific Python modules during the documentation build process.
+autodoc_mock_imports = [
+    "gi",
+    "pyatspi",
+    "PyQt5",
+    "tkinter",
+]
+
 # -- HTML configuration ------------------------------------------------------
 
 # The theme to use for HTML and HTML Help pages. See the Sphinx documentation
@@ -154,16 +163,6 @@ html_context = {
     'github_repo': 'autokey.github.io',
     'github_version': 'master/',
 }
-
-# List of modules used by the sphinx.ext.autodoc extension to tell Sphinx to
-# fake (mock) specific Python modules during the documentation build process.
-autodoc_mock_imports = [
-    "gi",
-    "pyatspi",
-    "PyQt5",
-    "tkinter",
-    "Tkinter"
-]
 
 # Work-around for the module docstring being posted at the top of every API
 # page:
