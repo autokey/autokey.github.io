@@ -179,7 +179,7 @@ def setup(app):
 # -- PDF configuration -------------------------------------------------------
 
 # Use AutoKey release version in PDF file names:
-simplepdf_file_name = f"AutoKey_v{release}.pdf"
+simplepdf_file_name = f"autokey-{release}.pdf"
 # Control style of the PDF and its single-file HTML artifact:
 simplepdf_vars = {
     'cover': '#ffffff',     # use for cover text
