@@ -44,7 +44,7 @@ This is a stand-alone guide that provides the steps needed to generate a single-
     ```
 13. Move the generated PDF file to the home directory so it isn't deleted on clean-up:
     ```bash
-    mv _build/simplepdf/AutoKey_v*.pdf ~/
+    mv _build/simplepdf/autokey-docs-*.pdf ~/
     ```
 14. Clean up afterwards:
     1. Deactivate the virtual environment:
