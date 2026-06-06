@@ -2,6 +2,7 @@
 
 ## Version 0.97.0~beta0
 <!-- ⬇️ ALWAYS INSERT NEW BULLETED ITEMS DIRECTLY BELOW THIS LINE ⬇️ -->
+- Remove the self-explanatory comment from above the **html_theme** variable in the `conf.py` file.
 - Update the **PDF** fielname in the `conf.py` and `guides/build-pdf.md` files for consistency.
 - Update the **PDF** comments in the `conf.py` file for clarity.
 - Move the **autodoc_mock_imports** list to a more appropriate location in the `conf.py` file.
