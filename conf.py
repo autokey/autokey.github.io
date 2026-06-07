@@ -124,8 +124,6 @@ autodoc_mock_imports = [
 
 # -- HTML configuration ------------------------------------------------------
 
-# The theme to use for HTML and HTML Help pages. See the Sphinx documentation
-# for a list of built-in themes:
 html_theme = 'sphinx_rtd_theme'
 
 # List of paths, relative to the documentation root directory, to custom
