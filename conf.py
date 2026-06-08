@@ -124,7 +124,13 @@ autodoc_mock_imports = [
 
 # -- HTML configuration ------------------------------------------------------
 
+html_favicon = 'favicon.ico'
+html_logo = 'autokey.png'
 html_theme = 'sphinx_rtd_theme'
+html_theme_options = {
+    'logo_only': True,
+    'display_version': True,
+}
 
 # List of paths, relative to the documentation root directory, to custom
 # static files (such as style-sheets). These files are copied over after the
@@ -144,14 +150,6 @@ if 'simplepdf' in sys.argv:
     html_use_index = False
 else:
     html_use_index = True
-
-html_logo = 'autokey.png'
-html_theme_options = {
-    'logo_only': True,
-    'display_version': True,
-}
-
-html_favicon = 'favicon.ico'
 
 # Location of the hosted source files passed to templates. Enables the
 # "Edit on GitHub" behavior in the top right corners of HTML pages:
