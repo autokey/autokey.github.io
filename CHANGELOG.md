@@ -2,6 +2,7 @@
 
 ## Version 0.97.0~beta0
 <!-- ⬇️ ALWAYS INSERT NEW BULLETED ITEMS DIRECTLY BELOW THIS LINE ⬇️ -->
+- Move several HTML variables to a more suitable location in the `conf.py` file.
 - Remove the self-explanatory comment from above the **html_theme** variable in the `conf.py` file.
 - Update the **PDF** fielname in the `conf.py` and `guides/build-pdf.md` files for consistency.
 - Update the **PDF** comments in the `conf.py` file for clarity.
