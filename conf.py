@@ -139,18 +139,6 @@ html_static_path = [
     '_static',
 ]
 
-# Apply custom CSS style to PDF builds:
-if 'simplepdf' in sys.argv:
-    html_css_files = ['custom.css']
-else:
-    html_css_files = []
-
-# Suppress creation of "Indices and Tables" for PDF builds:
-if 'simplepdf' in sys.argv:
-    html_use_index = False
-else:
-    html_use_index = True
-
 # Location of the hosted source files passed to templates. Enables the
 # "Edit on GitHub" behavior in the top right corners of HTML pages:
 html_context = {
@@ -173,6 +161,17 @@ def setup(app):
     app.connect('autodoc-process-docstring', skip_modules_docstring)
 
 # -- PDF configuration -------------------------------------------------------
+# Apply custom CSS style to PDF builds:
+if 'simplepdf' in sys.argv:
+    html_css_files = ['custom.css']
+else:
+    html_css_files = []
+
+# Suppress creation of "Indices and Tables" for PDF builds:
+if 'simplepdf' in sys.argv:
+    html_use_index = False
+else:
+    html_use_index = True
 
 # Use AutoKey release version in PDF file names:
 simplepdf_file_name = f"autokey-docs-{release}.pdf"
