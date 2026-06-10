@@ -38,6 +38,8 @@ else:
 # Point Sphinx to the library so it can generate API docs:
 sys.path.insert(0, os.path.join(autokey_root, "lib"))
 
+# -- Version information -----------------------------------------------------
+
 # Use logic from the autokey/setup.py file to get the AutoKey version:
 def get_autokey_version():
     source_file_name = os.path.join(autokey_root, "lib", "autokey", "common.py")
