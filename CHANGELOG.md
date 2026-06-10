@@ -2,6 +2,7 @@
 
 ## Version 0.97.0~beta0
 <!-- ⬇️ ALWAYS INSERT NEW BULLETED ITEMS DIRECTLY BELOW THIS LINE ⬇️ -->
+- Add the **Version information** section-heading to the `conf.py` file
 - Move two conditional **PDF** blocks to the **PDF configuration** section in the `conf.py` file.
 - Move several HTML variables to a more suitable location in the `conf.py` file.
 - Remove the self-explanatory comment from above the **html_theme** variable in the `conf.py` file.
