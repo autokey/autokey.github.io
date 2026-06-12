@@ -4,17 +4,17 @@
 # list, see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
-# -- Path setup --------------------------------------------------------------
+# -- Imports -----------------------------------------------------------------
 
-# If extensions (or modules to document with autodoc) are in another directory,
-# add these directories to sys.path here. If the directory is relative to the
-# documentation root, use os.path.abspath to make it absolute, as shown here.
-#
 import os
 import sys
 import re
 
-# -- Source information ------------------------------------------------------
+# -- Path information---------------------------------------------------------
+
+# If extensions (or modules to document with autodoc) are in another directory,
+# add these directories to sys.path here. If the directory is relative to the
+# documentation root, use os.path.abspath to make it absolute, as shown here.
 
 # Determine the absolute path to this conf.py file:
 base_path = os.path.dirname(os.path.abspath(__file__))
