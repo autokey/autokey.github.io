@@ -1,7 +1,7 @@
 # Configuration file for the Sphinx documentation builder.
 #
-# This file only contains a selection of the most common options. For a full
-# list, see the documentation:
+# This file only contains a selection of the most common options.
+# For a full list, see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
 # -- Imports -----------------------------------------------------------------
@@ -27,11 +27,11 @@ github_path = os.path.join(base_path, "autokey")
 
 # Select the correct path based on which one actually exists and print a breadcrumb to the log:
 if os.path.exists(local_path):
-    # This is what you'll see in your local tox tests:
+    # This is what you'll see in the local tox log:
     print("Sphinx Config: Using local/tox path structure 🚀")
     autokey_root = local_path
 else:
-    # This is what you'll see in the GitHub Action logs:
+    # This is what you'll see in the remote GitHub Action log:
     print("Sphinx Config: Using GitHub Actions path structure 🚀")
     autokey_root = github_path
 
