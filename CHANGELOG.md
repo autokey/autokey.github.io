@@ -2,6 +2,7 @@
 
 ## Version 0.97.0~beta0
 <!-- ⬇️ ALWAYS INSERT NEW BULLETED ITEMS DIRECTLY BELOW THIS LINE ⬇️ -->
+- Uodate three comments in the `conf.py` file for readability and clarity.
 - Refactor a comment and headings in the `conf.py` file for clarity.
 - Add the **Version information** section-heading to the `conf.py` file
 - Move two conditional **PDF** blocks to the **PDF configuration** section in the `conf.py` file.
