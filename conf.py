@@ -131,7 +131,6 @@ html_logo = 'autokey.png'
 html_theme = 'sphinx_rtd_theme'
 html_theme_options = {
     'logo_only': True,
-    'display_version': True,
 }
 
 # List of paths, relative to the documentation root directory, to custom
