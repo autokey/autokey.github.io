@@ -2,6 +2,7 @@
 
 ## Version 0.97.0~beta0
 <!-- ⬇️ ALWAYS INSERT NEW BULLETED ITEMS DIRECTLY BELOW THIS LINE ⬇️ -->
+- Add the **Ignored link configuration** section to the `conf.py` file.
 - Remove the **display_version** entry from the **html_theme_options** dictionary in the `conf.py` file.
 - Update three comments in the `conf.py` file for readability and clarity.
 - Refactor a comment and headings in the `conf.py` file for clarity.
