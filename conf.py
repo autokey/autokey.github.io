@@ -161,6 +161,18 @@ def skip_modules_docstring(app, what, name, obj, options, lines):
 def setup(app):
     app.connect('autodoc-process-docstring', skip_modules_docstring)
 
+# -- Ignored link configuration ----------------------------------------------
+
+# List of links for Sphinx to ignore to prevent false positives on validation:
+ignored_links = [
+    'https://github.com/autokey/autokey/wiki/Phrases',
+]
+
+# Automatically process the ignored_links list, giving each an escape and a wildcard:
+linkcheck_ignore = [
+    f"{re.escape(url)}.*" for url in ignored_links
+]
+
 # -- PDF configuration -------------------------------------------------------
 # Apply custom CSS style to PDF builds:
 if 'simplepdf' in sys.argv:
