@@ -67,7 +67,6 @@ def get_autokey_version():
 # -- Project information -----------------------------------------------------
 
 project = 'AutoKey'
-# Is there some way to have this be a link to github authors page?
 author = 'various'
 copyright = '2023, various'
 release = version = get_autokey_version()
