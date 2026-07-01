@@ -10,7 +10,7 @@ Use these steps to manage new and existing links:
 1. [Build the documentation locally](https://github.com/autokey/autokey.github.io/blob/master/guides/build-local.md) and check the output for warnings about links.
 2. Audit the links in the [conf.py](https://github.com/autokey/autokey.github.io/blob/master/conf.py) file's **ignored_links** list:
    1. Temporarily remove the links from the list.
-   2. Either generate a fresh build of the documentation with the `make clean html` command or run the `make linkcheck` command and check the output for warnings.
+   2. Run the `make linkcheck` command in a terminal window and check the output for warnings.
    3. Return any links that received warnings back to the **ignored_links** list.
    4. Discard the remaining links that were set aside and now pass the test.
    5. Audit the links that are still in the list to verify that they're still relevant:
@@ -19,7 +19,7 @@ Use these steps to manage new and existing links:
       3. Examine the contents of the page.
    6. If a link that's in the **ignored_links** list is removed from its corresponding `.rst` file, also remove it from the **ignored_links** list.
 3. Audit the links in the `.rst` source files to verify that they're still valid by testing them:
-   1. Either generate a fresh build of the documentation with the `make clean html` command or run the `make linkcheck` command and check the output for warnings.
+   1. Run the `make linkcheck` command in a terminal window and check the output for warnings.
    2. Update any links that have changed.
    3. Discard any links that no longer exist, replacing them with new ones, if possible.
 4. Audit the links in the `.rst` source files to verify that they're still relevant for users:
@@ -30,11 +30,11 @@ Use these steps to manage new and existing links:
    1. With a new link in place in an `.rst` file, [build the documentation locally](https://github.com/autokey/autokey.github.io/blob/master/guides/build-local.md) and check its output for a warning.
    2. If it generates a false-positive warning:
       1. Add the link to the [conf.py](https://github.com/autokey/autokey.github.io/blob/master/conf.py) file's **ignored_links** list.
-      2. Either generate a fresh build of the documentation with the `make clean html` command or run the `make linkcheck` command.
-      3. Check its output to make sure it's being ignored.
+      2. Run the `make linkcheck` command in a terminal window and check the output to make sure it's being ignored.
 
 ### Notes
-* When adding or removing links to or from the **ignored_links** list in the `conf.py` file, keep the **Python** syntax for strings in lists intact by surrounding each link with single quotes and adding a trailing comma to the end. For example:
+* When adding or removing links to or from the **ignored_links** list in the `conf.py` file, keep the **Python** syntax for strings in lists intact by surrounding each link with single quotes and adding a trailing comma to the end of **each** one. For example:
   ```python
-   'https://github.com',
+   'https://example-one.com',
+   'https://example-two.com',
   ```
