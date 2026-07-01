@@ -2,6 +2,7 @@
 
 ## Version 0.97.0~beta0
 <!-- ⬇️ ALWAYS INSERT NEW BULLETED ITEMS DIRECTLY BELOW THIS LINE ⬇️ -->
+- Rename the new `templates` directory to `_templates` so the new footer will work.
 - Add a footer template to make copyright author acknowledgments clickable.
 - Add the **Ignored link configuration** section to the `conf.py` file.
 - Remove the **display_version** entry from the **html_theme_options** dictionary in the `conf.py` file.
