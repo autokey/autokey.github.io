@@ -2,6 +2,7 @@
 
 ## Version 0.97.0~beta0
 <!-- ⬇️ ALWAYS INSERT NEW BULLETED ITEMS DIRECTLY BELOW THIS LINE ⬇️ -->
+- Remove unnecessary blank line and `mkdir docs` command from the `pages.yml` file.
 - Update the `README.md` file's formatting, structure, and contents.
 - Add a guide for auditing the documentation links.
 - Rename the new `templates` directory to `_templates` so the new footer will work.
